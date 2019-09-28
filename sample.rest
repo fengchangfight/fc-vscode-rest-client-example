@@ -52,3 +52,13 @@ Content-Type: image/png
 
 ### delete by id
 DELETE  http://localhost:8231/api/public/sample/book/0x235
+
+### update book by id
+PUT http://localhost:8231/api/public/sample/book/0x235
+content-type: application/json
+
+{
+    "isbn": "238tewfs",
+    "title": "love",
+    "author":"mick"
+}

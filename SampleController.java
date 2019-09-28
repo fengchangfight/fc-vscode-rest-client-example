@@ -59,8 +59,14 @@ public class SampleController {
     }
 
     @DeleteMapping("/book/{id}")
-    public ResponseEntity<?> insertRand(@PathVariable("id") String id) {
+    public ResponseEntity<?> bookDelete(@PathVariable("id") String id) {
         System.out.printf("Book id is : %s", id);
         return new ResponseEntity<>("book deleted", HttpStatus.OK);
+    }
+    @PutMapping("/book/{id}")
+    public ResponseEntity<?> updateBook(@PathVariable("id") String id, @RequestBody UpdateBookRequest req) {
+        System.out.println(req.toString());
+        System.out.printf("Book id to update: %s", id);
+        return new ResponseEntity<>("book updated",HttpStatus.OK);
     }
 }
