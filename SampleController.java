@@ -63,10 +63,18 @@ public class SampleController {
         System.out.printf("Book id is : %s", id);
         return new ResponseEntity<>("book deleted", HttpStatus.OK);
     }
+
     @PutMapping("/book/{id}")
     public ResponseEntity<?> updateBook(@PathVariable("id") String id, @RequestBody UpdateBookRequest req) {
         System.out.println(req.toString());
         System.out.printf("Book id to update: %s", id);
-        return new ResponseEntity<>("book updated",HttpStatus.OK);
+        return new ResponseEntity<>("book updated", HttpStatus.OK);
+    }
+
+    @PostMapping("/try")
+    public ResponseEntity<?> getUrlEncodeParams(@RequestParam("name") String name,
+            @RequestParam("password") String password) {
+        System.out.printf("Name is : %s, password is : %s", name, password);
+        return new ResponseEntity<>("Params got", HttpStatus.OK);
     }
 }
