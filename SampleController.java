@@ -57,4 +57,10 @@ public class SampleController {
         }
         return new ResponseEntity<>("upload succeed", HttpStatus.OK);
     }
+
+    @DeleteMapping("/book/{id}")
+    public ResponseEntity<?> insertRand(@PathVariable("id") String id) {
+        System.out.printf("Book id is : %s", id);
+        return new ResponseEntity<>("book deleted", HttpStatus.OK);
+    }
 }

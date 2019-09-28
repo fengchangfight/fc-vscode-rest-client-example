@@ -48,3 +48,7 @@ Content-Type: image/png
 < ./2.png
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW2--
+
+
+### delete by id
+DELETE  http://localhost:8231/api/public/sample/book/0x235
