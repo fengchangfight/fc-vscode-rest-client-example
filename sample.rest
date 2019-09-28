@@ -10,10 +10,10 @@ content-type: application/json
     "age": 12
 }
 
-### try get with parameters
+### try get with application/x-www-form-urlencoded 
 GET http://localhost:8231/api/public/sample/yoho?name=jet&description=itsjustfine
 
-### try upload file with multipart/form-data
+### upload single images with multipart/form-data
 POST http://localhost:8231/api/public/sample/image
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW2
 
@@ -28,7 +28,7 @@ Content-Type: image/png
 < ./1.jpg
 ------WebKitFormBoundary7MA4YWxkTrZu0gW2--
 
-###
+### upload multiple images with multipart/form-data
 POST http://localhost:8231/api/public/sample/multiple-images
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW2
 
